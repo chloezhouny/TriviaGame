@@ -78,6 +78,12 @@ $(document).ready (function(){
 		$("#questionSection").show();
 		$("#answerSection").hide();
 		$("#resultSection").hide();
+		$("#question").html(arr[indexQuestion].question);
+		$("#a").html(arr[indexQuestion].choices[0]);
+		$("#b").html(arr[indexQuestion].choices[1]);
+		$("#c").html(arr[indexQuestion].choices[2]);
+		$("#d").html(arr[indexQuestion].choices[3]);
+
 		timeLeft = 15;
 		$("#time").html(timeLeft);
 		timer = setInterval(function()
@@ -98,7 +104,7 @@ $(document).ready (function(){
 	}
 
 	// on click to answer the question
-	$(".question").on("click", function()
+	$(".choice").on("click", function()
 	{
 		clearTimeout(questionTimeout);
 		click = 1;
@@ -178,7 +184,7 @@ $(document).ready (function(){
 		click = 0;
 		userAnswer = "";
 		correctCount = 0;
-		wrongCount = 0;
+		incorrectCount = 0;
 		unansweredCount = 0;
 		questionTimeout = "";
 	    clearInterval(timer);
