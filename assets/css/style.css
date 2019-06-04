@@ -70,3 +70,14 @@ body
 {
 	text-align: center;
 }
+
+.result
+{
+	width: 100%;
+	text-align: center;
+}
+
+#resultSection
+{
+	margin-top: 100px;
+}
