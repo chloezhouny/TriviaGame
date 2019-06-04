@@ -15,7 +15,7 @@ $(document).ready (function(){
 	[	
 		{
 			index: 0, 
-			question:  "'Uh almost. There are a few provisos, a couple of quid pro quo.' Regarding granting wishes, which of the following can the I do?",
+			question:  "Regarding granting wishes, which of the following can I do?",
 			choices: ["Kill Someone","Make Anybody Fall in Love","Bring People Back from the Dead","Make Someone Royalty"],
 			answer: "d",
 			answerMore: "Make Someone Royalty"
@@ -24,7 +24,7 @@ $(document).ready (function(){
 		{
 			index: 1, 
 			question: "Which is not part of Prince Ali's animal collection, as explained in the lyrics to 'Prince Ali'?",		
-			choices: ["75 golden camels","95 white Persian monkeys","53 purple peacocks","45 red parrots"],
+			choices: ["75 Golden Camels","95 White Persian Monkeys","53 Purple Peacocks","45 Red Parrots"],
 			answer: "d",
 			answerMore: "45 red parrots"
 		},
@@ -39,15 +39,15 @@ $(document).ready (function(){
 
 		{
 			index: 3, 
-			question: "Who did Glen Keane use as inspiration in designing Aladdin's pants?",
-			choices: ["M.C. Hammer","Tom Cruise","Scott Weinger","Michael J. Fox"],
+			question: "What famous actor is Aladdin's look based on?",
+			choices: ["Tom Cruise", "Tom Hanks" ,"Michael J. Fox","John Stamos"],
 			answer: "a",
-			answerMore: "M.C. Hammer"
+			answerMore: "Tom Cruise"
 		},	
 
 		{
 			index: 4, 
-			question: "The Genie won't bring people back from the dead",
+			question: "The Genie won't bring people back from the dead.",
 			choices: ["True","False","N/A","N/A"],
 			answer: "a",
 			answerMore: "True"
@@ -79,10 +79,10 @@ $(document).ready (function(){
 
 		{
 			index: 8, 
-			question: "Which one of these actors was not considered for the voice of Genie?",
+			question: "Which one of these actors was not considered for the voice of mine?",
 			choices: ["Martin Short","John Goodman", "Albert Brooks","Billy Crystal"],
-			answer: "b",
-			answerMore: "aba"
+			answer: "d",
+			answerMore: "Billy Crystal"
 		},	
 
 		{
@@ -95,7 +95,7 @@ $(document).ready (function(){
 
 		{
 			index: 10, 
-			question: "How long has it been since Genie has seen the magic carpet at the beginning of the film?",
+			question: "How long has it been since I have seen the magic carpet at the beginning of the film?",
 			choices: ["100 Years","50 Thousand Eons", "A Few Millennia", "5 Lightyears"],
 			answer: "c",
 			answerMore: "A Few Millennia"
@@ -206,7 +206,7 @@ $(document).ready (function(){
 			unansweredCount ++;
 		}
 
-		$("#answer").html(arr[indexQuestion].answerMore);
+		$("#answer").html("Correct Answer: " + arr[indexQuestion].answerMore);
 
 		setTimeout(function(){
 			if (indexQuestion < arr.length - 1)
@@ -219,7 +219,7 @@ $(document).ready (function(){
 			{
 				getResultSecene();
 			}
-		}, 1000);
+		}, 5000);
 	}
 
 

@@ -66,14 +66,23 @@ body
 	margin-top: 50px;
 }
 
+.choice
+{
+	z-index: 10;
+}
 #questionSection .row
 {
 	text-align: center;
 }
 
+
+#answerSection
+{
+	margin-top: 30px;
+}
 .response
 {
-	margin-top: 150px;
+	margin-top: 100px;
 }
 .result
 {
