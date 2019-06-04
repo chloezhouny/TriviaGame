@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+     <!-- Lamp and Genie Scene -->
+
+    <!-- <div class id = "lampSection">
+        <img src="assets/images/lamp.png" id= "lamp" width="300px">
+    </div>*/ -->
+    <div class id = "genieSection">
+        <img src="assets/images/genie.png" id = "genie" class = "uk-animation-slide-left uk-animation-shake" width="300px">       
+    </div>
+
+    <div id="carpetSection">
+         <img src="assets/images/lamp.png" id= "lamp" width="300px">
+        <img src="assets/images/carpet3.png" id = 'carpet' class = "uk-animation-slide-bottom">
+    </div>
+
+    <div class = "container">    
+
+        <!-- Start Scene-->
+        <div class = "row" id="startSection">
+            <button type="button" class="btn btn-outline-light btn-lg btn-block" >Free me out of the lamp</button>
+            <div class= "col">
+        </div>
+        </div>
+
+        <!-- Question, Answer & Result Container-->
+        <!-- Time section -->
+        <div class = "row" id = "timeSection">
+            <div class = "col-12">
+                <div class = "row d-flex justify-content-center">
+                    <div calss = "col-3">Time Left</div>
+                </div>   
+                 <div class = "row d-flex justify-content-center">
+                    <div calss = "col-3" id = "time"></div>
+                </div>           
+            </div>   
+        </div>
+
+        <!-- Question Secene -->
+        <div class = "row " id = "questionSection">
+            <div class = "col-12">
+                <div class = "row">
+                    <div class = "col-12">Question:</div>
+                </div>
+                <br>
+                <div class = "row d-flex justify-content-center">
+                    <div class = "col-8">  
+                        <div class = "row"> 
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block question" id="a" data-name = "a">Block level button</button>
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block question" id="b" data-name = "b">Block level button</button>
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block question" id="c" data-name = "c">Block level button</button>
+                            <button type="button" class="btn btn-outline-light btn-lg btn-block question" id="d" data-name = "d">Block level button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+
+       <!-- Answer Secene -->
+
+        <div class = "row" id = "answerSection">
+            <div class = "col-12">
+
+            </div>
+        </div>
+
+      <!-- Result Secene -->
+        <div class = "row" id = "resultSection">
+            <div class = "col-12">
+                <div class = "row">
+                    <div class = "col-12"> All done!</div>
+                <div class = "row">
+                    <div class = "col-12" id = "correct"></div>
+                </div>
+                <div class = "row">
+                    <div class = "col-12" id = "incorrect"></div>
+                </div>
+                <div class = "row">
+                    <div class = "col-12" id = "unanswered"></div>
+                </div>
+                <div class = "row">
+                    <div class = "col-12">
+                    <button type="button" class="btn btn-outline-light btn-block" id="restart">Restart</button>
+                 </div>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+
+  
+    <!-- Javascript  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+
+</body>
+</html>
