@@ -15,35 +15,94 @@ $(document).ready (function(){
 	[	
 		{
 			index: 0, 
-			question: "question",
-			choices: ["a","b","c","d"],
-			answer: "a",
-			answerMore: "aba"
+			question:  "'Uh almost. There are a few provisos, a couple of quid pro quo.' Regarding granting wishes, which of the following can the I do?",
+			choices: ["Kill Someone","Make Anybody Fall in Love","Bring People Back from the Dead","Make Someone Royalty"],
+			answer: "d",
+			answerMore: "Make Someone Royalty"
 		},
 		
 		{
 			index: 1, 
-			question: "question",
-			choices: ["a","b","c","d"],
-			answer: "c",
-			answerMore: "aba"
+			question: "Which is not part of Prince Ali's animal collection, as explained in the lyrics to 'Prince Ali'?",		
+			choices: ["75 golden camels","95 white Persian monkeys","53 purple peacocks","45 red parrots"],
+			answer: "d",
+			answerMore: "45 red parrots"
 		},
 		
 		{
 			index: 2, 
-			question: "question",
-			choices: ["a","b","c","d"],
-			answer: "d",
-			answerMore: "aba"
+			question: "What is Jafar's official title?",
+			choices: ["Majordomo","Royal Vizier","Royal Advisor","Grand Duke"],
+			answer: "b",
+			answerMore: "Royal Vizier"
 		},
 
 		{
 			index: 3, 
-			question: "question",
-			choices: ["a","b","c","d"],
+			question: "Who did Glen Keane use as inspiration in designing Aladdin's pants?",
+			choices: ["M.C. Hammer","Tom Cruise","Scott Weinger","Michael J. Fox"],
+			answer: "a",
+			answerMore: "M.C. Hammer"
+		},	
+
+		{
+			index: 4, 
+			question: "The Genie won't bring people back from the dead",
+			choices: ["True","False","N/A","N/A"],
+			answer: "a",
+			answerMore: "True"
+		},	
+
+		{
+			index: 5, 
+			question: "Which member of Aladdin's voice cast went on to reprise their role in Aladdin on broadway?",
+			choices: ["Jonathan Freeman","Scott Weinger","Lea Salonga","Gilbert Gottfried"],
+			answer: "a",
+			answerMore: "Jonathan Freeman"
+		},
+
+		{
+			index: 6, 
+			question: "What is Aladdin's second wish in the film?",
+			choices: ["To become Prince Ali","To Own a Magic Carpet","To Be Saved From Drowning","To Free Genie"],
+			answer: "c",
+			answerMore: "To Be Saved From Drowning"
+		},	
+
+		{
+			index: 7, 
+			question: "What does Aladdin give Jasmine during 'A Whole New World'?",
+			choices: ["An Apple","A Swan","A Necklace","A Ring"],
+			answer: "a",
+			answerMore: "An Apple"
+		},	
+
+		{
+			index: 8, 
+			question: "Which one of these actors was not considered for the voice of Genie?",
+			choices: ["Martin Short","John Goodman", "Albert Brooks","Billy Crystal"],
 			answer: "b",
 			answerMore: "aba"
+		},	
+
+		{
+			index: 9, 
+			question: "Which Disney character makes a cameo in the Sultan's toy tower?",
+			choices: ["Mickey Mouse","Beast", "Ariel", "Baloo"],
+			answer: "b",
+			answerMore: "Beast"
+		},	
+
+		{
+			index: 10, 
+			question: "How long has it been since Genie has seen the magic carpet at the beginning of the film?",
+			choices: ["100 Years","50 Thousand Eons", "A Few Millennia", "5 Lightyears"],
+			answer: "c",
+			answerMore: "A Few Millennia"
 		}	
+
+
+
 	];
 
 	getStartSecene();
@@ -124,26 +183,30 @@ $(document).ready (function(){
 		$("#questionSection").hide();
 		$("#answerSection").show();
 		$("#resultSection").hide();
-		console.log(click);
+
 
 		if (click !== 0)
 		{
 			if (userAnswer === arr[indexQuestion].answer)
 			{
-				console.log("Correct!");
+				$("#response").html("Hi master!")
+				$("#genieSection").show();
 				correctCount ++;
 			}
 			else
 			{
-				console.log("Wrong!");
+				$("#response").html("Oops...")
+				$("#genieSection").hide();
 				incorrectCount ++;
 			}
 		}
 		else if(click === 0)
 		{
-			console.log("Out of time!");
+			$("#response").html("Out of time...");
 			unansweredCount ++;
 		}
+
+		$("#answer").html(arr[indexQuestion].answerMore);
 
 		setTimeout(function(){
 			if (indexQuestion < arr.length - 1)
