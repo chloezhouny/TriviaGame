@@ -64,33 +64,73 @@ body
 #startSection
 {
 	margin-top: 50px;
+	font-family: 'Lobster Two', cursive;
+}
+
+
+#timeSection
+{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#questionSection
+{
+	margin-top: 20px;
+}
+#questionSection .row
+{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .choice
 {
 	z-index: 10;
 }
-#questionSection .row
-{
-	text-align: center;
-}
 
+#choiceSection
+{
+	margin-top: 10px;
+}
 
 #answerSection
 {
 	margin-top: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
 }
-.response
+
+
+#response
 {
-	margin-top: 100px;
+	font-family: 'Lobster Two', cursive;
 }
+
 .result
 {
 	width: 100%;
 	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
 }
+
 
 #resultSection
 {
-	margin-top: 50px;
+	margin-top: 50px;	
+}
+
+#restart
+{
+	font-family: 'Lobster Two', cursive;
+}
+
+
+#circle
+{
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 100;
+	opacity: 0.2;
+
 }

@@ -191,11 +191,12 @@ $(document).ready (function(){
 			{
 				$("#response").html("Hi master!")
 				$("#genieSection").show();
+				getCircle();
 				correctCount ++;
 			}
 			else
 			{
-				$("#response").html("Oops...")
+				$("#response").html("I'm sick...")
 				$("#genieSection").hide();
 				incorrectCount ++;
 			}
@@ -204,6 +205,7 @@ $(document).ready (function(){
 		{
 			$("#response").html("Out of time...");
 			unansweredCount ++;
+			$("#genieSection").hide();
 		}
 
 		$("#answer").html("Correct Answer: " + arr[indexQuestion].answerMore);
@@ -255,6 +257,93 @@ $(document).ready (function(){
 		getStartSecene();
 		
 	})
+
+	var circleArr = [];
+
+
+
+// Animation
+
+
+
+
+
+	function getCircle()
+	{
+
+		for (var i = 0; i < 30; i++)
+		{
+
+		 var circle;
+		 circle = $("<div id='circle'>");
+		 $("#genieSection").append(circle);
+		 circle.css("right", 200);
+		 circle.css("background-color", "#ddccff");
+		 circle.css("top", 200);
+		 circle.attr("data-top", 1);
+		 circle.attr("data-right", 1);
+		 circleArr.push(circle);
+		}
+
+		
+		setInterval(function()
+		{		
+
+		
+			for(var i = 0; i < circleArr.length; i++)
+			{
+				var cTDirection = 1;
+				var cRDirection = 1;
+				
+				var cTop = parseInt(circleArr[i].css("top"));
+				var cRight = parseInt(circleArr[i].css("right"));	
+				console.log(cTop);
+				console.log(cRight);
+				var change = Math.floor(Math.random() * 100);
+
+				if (change < 10)
+				{
+					cTDirection *= -1;
+				}
+				else if (change > 90)
+				{
+					cRDirection *= -1;
+				}
+
+				cTop = Math.floor(Math.random() * 3 + 3) * cTDirection + cTop;
+				cRight = Math.floor(Math.random() * 3 + 3) * cRDirection + cRight;
+
+				circleArr[i].css("top", cTop);
+				circleArr[i].css("right", cRight);
+			}
+
+			 var circle;
+			 circle = $("<div id='circle'>");
+			 $("#genieSection").append(circle);
+			 circle.css("right", 200);
+			 circle.css("background-color", "#ddccff");
+			 circle.css("top", 200);
+			 circle.attr("data-top", 1);
+			 circle.attr("data-right", 1);
+			 circleArr.push(circle);
+			 
+			 if (circleArr.length > 30)
+			 {
+			 	for (var i = 0; i< 20; i++)
+			 	{
+			 		circleArr.shift();
+			 	}
+			 }		
+
+		},1)
+	}
+
+
+
+
+
+
+
 
 
 	var height = 425;
